@@ -1,44 +1,44 @@
-"use strict";
+/* Задание на урок:
 
-// const result = confirm("Are you fapping?");
-// console.log(result);
+1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
+'Сколько фильмов вы уже посмотрели?'
 
-// const answer = prompt("Вам есть 18?", "18");
-// console.log(answer + 66);
+2) Создать объект personalMovieDB и в него поместить такие свойства:
+    - count - сюда передается ответ на первый вопрос
+    - movies - в это свойство поместить пустой объект
+    - actors - тоже поместить пустой объект
+    - genres - сюда поместить пустой массив
+    - privat - в это свойство поместить boolean(логическое) значение false
 
-// console.log(4 + +"15");
+3) Задайте пользователю по два раза вопросы:
+    - 'Один из последних просмотренных фильмов?'
+    - 'На сколько оцените его?'
+Ответы стоит поместить в отдельные переменные
+Записать ответы в объект movies в формате: 
+    movies: {
+        'logan': '8.1'
+    }
 
-const isChecked = true,
-isClose = false;
+Проверить, чтобы все работало без ошибок в консоли */
 
-console.log(isChecked || isClose);
+'use strict';
 
-// const answers = [];
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-// answers[0] = prompt('Как ваше имя?', '');
-// answers[1] = prompt('Как ваша фамилия?', '');
-// answers[2] = prompt('Сколько вам лет?', '');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-// document.write(answers);
-// const vehicleBodyWidth = 5000;
-// const vehicleBodyLength = 4000;
+const a = prompt('Один из последних просмотренных фильмов?', '');
+const b = prompt('На сколько оцените его?', '');
+const c= prompt('Один из последних просмотренных фильмов?', '');
+const d = prompt('На сколько оцените его?', '');
 
-// console.log("Ширина кузова автомобиля: " + vehicleBodyWidth + ", длина: " + vehicleBodyLength);
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-// let userName = 'John'; 
-// let userNumber = 25;
-// userNumber = 24;
-
-// let storeName = 'Apple';
-// const storeDescription = {
-//     budget: 10000,
-//     employees: ['Alan', 'Dane', 'Peter'],
-//     products: {
-//         apples: 665,
-//         bananas: 798
-//     },
-//     open: true
-
-// };
-
-// alert('hello');
+console.log(personalMovieDB);
